@@ -1,13 +1,15 @@
 import type { NextPage } from "next";
+
+import ImagePreview from "../components/ImagePreview";
 import MenuBar from "../components/MenuBar";
 
-const Home: NextPage = () => {
+const ImageBox: NextPage = () => {
   return (
     <div>
       <MenuBar />
-      <div>TypeScript 연습</div>
+      <ImagePreview />
     </div>
   );
 };
 
-export default Home;
+export default ImageBox;
