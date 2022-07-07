@@ -4,7 +4,13 @@ import { useState } from "react";
 const RadioButton: NextPage = () => {
   const [value, setValue] = useState("");
   const handleChange = (e: any) => {
-    setValue(e.target.value);
+    if (e.target.value == value) {
+      console.log("uncheck" + e.target.value);
+      setValue("");
+    } else {
+      setValue(e.target.value);
+      console.log("check" + e.target.value);
+    }
   };
   return (
     <div>
@@ -12,11 +18,29 @@ const RadioButton: NextPage = () => {
       <div>
         <form>
           <label htmlFor="A">A</label>
-          <input type="radio" value="A" id="A" onChange={handleChange} />
+          <input
+            type="radio"
+            value="A"
+            name="A"
+            id="A"
+            onChange={handleChange}
+          />
           <label htmlFor="B">B</label>
-          <input type="radio" value="B" id="B" onChange={handleChange} />
+          <input
+            type="radio"
+            value="B"
+            name="B"
+            id="B"
+            onChange={handleChange}
+          />
           <label htmlFor="C">C</label>
-          <input type="radio" value="C" id="C" onChange={handleChange} />
+          <input
+            type="radio"
+            value="C"
+            name="C"
+            id="C"
+            onChange={handleChange}
+          />
         </form>
       </div>
       <div>Selected : {value}</div>
