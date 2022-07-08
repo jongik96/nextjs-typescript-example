@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import MenuBar from "../components/MenuBar";
 import ReactConfirmAlert from "../components/ReactConfirmAlert";
 import ReactjsPopup from "../components/ReactjsPopup";
+import SweetAlert from "../components/SweetAlert";
 
 const Modal: NextPage = () => {
   return (
@@ -15,6 +16,9 @@ const Modal: NextPage = () => {
         </div>
         <div style={{ height: "100px" }}>
           <ReactConfirmAlert />
+        </div>
+        <div style={{ height: "100px" }}>
+          <SweetAlert />
         </div>
       </div>
     </div>
