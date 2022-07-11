@@ -1,3 +1,5 @@
 # nextjs-typescript-example
 
-react+TypeScript 예시 모음
+Next.js+TypeScript 예시 모음
+
+hook, api 요청, modal, dropdown, image 등의 함수 정리
