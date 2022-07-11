@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 
 import MenuBar from "../components/MenuBar";
-import InputEvent from "../components/InputEvent";
-import SelectBox from "../components/SelectBox";
-import RadioButton from "../components/RadioButton";
-import CheckBox from "../components/CheckBox";
-import TabMovement from "../components/TabMovement";
+import InputEvent from "../components/inputs/InputEvent";
+import SelectBox from "../components/inputs/SelectBox";
+import RadioButton from "../components/inputs/RadioButton";
+import CheckBox from "../components/inputs/CheckBox";
+import TabMovement from "../components/inputs/TabMovement";
 
 const Input: NextPage = () => {
   return (

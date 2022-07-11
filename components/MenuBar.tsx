@@ -8,6 +8,7 @@ const MenuBar = () => {
         <Link href="/ImageBox"> Image Upload Example</Link> |
         <Link href="/Hook"> Hook Example</Link> |
         <Link href="/ApiTest"> axios TypeScript</Link> |
+        <Link href="/DropdownMenu"> Dropdown Menu </Link> |
         <Link href="/Modal"> Modal </Link> |
         <Link href="/MarkdownEditor"> MarkDown Editor </Link> |
       </div>

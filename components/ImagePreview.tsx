@@ -23,7 +23,7 @@ const ImagePreview: NextPage = () => {
       <table>
         <tbody>
           <tr>
-            <th>이미지</th>
+            <th>정사각형 이미지</th>
             <td>
               <div>
                 {fileImage && (
@@ -60,6 +60,29 @@ const ImagePreview: NextPage = () => {
                     삭제
                   </button>
                 </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>원 이미지</th>
+            <td>
+              <div
+                style={{
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  width: "100px",
+                  height: "100px",
+                }}
+              >
+                {fileImage && (
+                  <Image
+                    alt="sample"
+                    src={fileImage}
+                    width={100}
+                    height={100}
+                    // layout="fill"
+                  />
+                )}
               </div>
             </td>
           </tr>

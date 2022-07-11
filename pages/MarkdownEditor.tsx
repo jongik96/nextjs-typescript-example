@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 
 import MenuBar from "../components/MenuBar";
-import UIWContainer from "../components/UIWContainer";
+import UIWContainer from "../components/markdown/UIWContainer";
 
 const MarkdownEditor: NextPage = () => {
   return (

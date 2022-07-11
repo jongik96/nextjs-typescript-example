@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useCallback, useState } from "react";
 
-import UIW from "../components/UIW";
+import UIW from "./UIW";
 
 type PageProps = {};
 
