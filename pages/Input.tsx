@@ -6,6 +6,7 @@ import SelectBox from "../components/inputs/SelectBox";
 import RadioButton from "../components/inputs/RadioButton";
 import CheckBox from "../components/inputs/CheckBox";
 import TabMovement from "../components/inputs/TabMovement";
+import TagInput from "../components/inputs/TagInput";
 
 const Input: NextPage = () => {
   return (
@@ -26,6 +27,9 @@ const Input: NextPage = () => {
         </div>
         <div style={{ height: "100px" }}>
           <TabMovement />
+        </div>
+        <div style={{ height: "100px" }}>
+          <TagInput />
         </div>
       </div>
     </div>
