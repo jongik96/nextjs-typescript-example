@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const SelectBox: NextPage = () => {
   const [value, setValue] = useState("");
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setValue(e.target.value);
   };
   return (

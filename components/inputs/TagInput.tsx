@@ -64,7 +64,7 @@ export default function TagInput() {
 
     if (keyCode === 13 && trimmedInput.length && !tags.includes(trimmedInput)) {
       e.preventDefault();
-      setTags((prevState) => [...prevState, trimmedInput]);
+      setTags((prevState): any => [...prevState, trimmedInput]);
       setInput("");
     }
 

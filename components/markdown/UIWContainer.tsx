@@ -7,7 +7,7 @@ type PageProps = {};
 
 const UIWContainer: NextPage<PageProps> = ({}) => {
   const [value, setValue] = useState("");
-  const handleChange = useCallback((value) => {
+  const handleChange = useCallback((value: any) => {
     setValue(value);
   }, []);
   return <UIW value={value} onChange={handleChange} />;

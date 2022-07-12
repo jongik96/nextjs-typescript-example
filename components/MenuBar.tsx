@@ -9,8 +9,11 @@ const MenuBar = () => {
         <Link href="/Hook"> Hook Example</Link> |
         <Link href="/ApiTest"> axios TypeScript</Link> |
         <Link href="/DropdownMenu"> Dropdown Menu </Link> |
+        <Link href="/CheckBox"> CheckBox </Link> |
         <Link href="/Modal"> Modal </Link> |
         <Link href="/MarkdownEditor"> MarkDown Editor </Link> |
+        <Link href="/TabPage"> Tab Page </Link> |
+        <Link href="/HideNavBar"> Hide NavBar </Link> |
       </div>
     </div>
   );

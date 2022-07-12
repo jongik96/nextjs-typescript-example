@@ -33,7 +33,7 @@ const ApiTest: NextPage = () => {
       <div>Hook + TypeScript</div>
       <ul>
         {userData &&
-          userData.map((item) => {
+          userData.map((item: any) => {
             return <li key={item.id}>{item.name}</li>;
           })}
       </ul>
