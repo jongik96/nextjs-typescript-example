@@ -14,6 +14,7 @@ const MenuBar = () => {
         <Link href="/MarkdownEditor"> MarkDown Editor </Link> |
         <Link href="/TabPage"> Tab Page </Link> |
         <Link href="/HideNavBar"> Hide NavBar </Link> |
+        <Link href="/ScrollRestoration"> Scroll restoration </Link> |
       </div>
     </div>
   );

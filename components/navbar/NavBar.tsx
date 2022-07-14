@@ -1,72 +1,31 @@
-import Link from "next/link";
-import React from "react";
+import { useScrollDirection } from "./useScrollDirection";
 import styled from "styled-components";
-import { useScroll } from "./ScrollHook";
 
-const NavBarActive = styled.nav`
-visibility: "visible",
-transition: "all 0.5s"
+const Header = styled.div`
+  position: sticky;
+  top: 0px;
+  background-color: #bfdbfe;
+  height: 6rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
 `;
 
-const NavBarHidden = styled.nav`visibility: "hidden",
-transition: "all 0.5s",
-transform: "translateY(-100%)"
+const HeaderDown = styled.div`
+  top: -6rem;
 `;
 
-export default function Navbar() {
-  const { y, x, scrollDirection } = useScroll();
+const NavBar = () => {
+  const scrollDirection = useScrollDirection();
 
   return (
     <>
-      {scrollDirection === "down" ? (
-        <NavBarActive>
-          <Link href="/" className="Header__link">
-            <img
-              src="../../public/favicon.ico"
-              height="50px"
-              width="auto"
-              alt="logo"
-            />
-            <div className="Header__link__title">Chronology</div>
-          </Link>
-          <ul className="flex">
-            <li>
-              <Link href="/about" className="Header__link">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="Header__link">
-                Blogs
-              </Link>
-            </li>
-          </ul>
-        </NavBarActive>
-      ) : (
-        <NavBarHidden>
-          <Link href="/" className="Header__link">
-            <img
-              src="../../public/favicon.ico"
-              height="50px"
-              width="auto"
-              alt="logo"
-            />
-            <div className="Header__link__title">Chronology</div>
-          </Link>
-          <ul className="flex">
-            <li>
-              <Link href="/about" className="Header__link">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="Header__link">
-                Blogs
-              </Link>
-            </li>
-          </ul>
-        </NavBarHidden>
+      {scrollDirection === "down" && (
+        <HeaderDown>DisappearingHeader</HeaderDown>
       )}
+      {scrollDirection !== "down" && <Header>DisappearingHeader</Header>}
     </>
   );
-}
+};
+
+export default NavBar;
