@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import React, { ChangeEventHandler, useState } from "react";
 
 const RadioButton: NextPage = () => {
   const [value, setValue] = useState("");
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value == value) {
       console.log("uncheck" + e.target.value);
       setValue("");

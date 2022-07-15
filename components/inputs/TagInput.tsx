@@ -8,11 +8,12 @@ const Tag = styled.div`
   margin-right: 10px;
   padding: 0 10px;
   padding-right: 5px;
-  border: 1px solid orange;
+  border: 2px solid green;
   border-radius: 5px;
-  background-color: orange;
+  background-color: white;
   white-space: nowrap;
-  color: white;
+  color: black;
+  font-weight: bolder;
 `;
 const TagButton = styled.button`
   display: flex;
@@ -20,7 +21,7 @@ const TagButton = styled.button`
   border: none;
   background-color: unset;
   cursor: pointer;
-  color: white;
+  color: red;
 `;
 
 const Container = styled.div`
@@ -48,7 +49,7 @@ export default function TagInput() {
   const [tags, setTags] = useState([]);
   const [isKeyReleased, setIsKeyReleased] = useState(false);
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setInput(value);
   };
@@ -57,7 +58,7 @@ export default function TagInput() {
     setTags((prevState) => prevState.filter((tag, i) => i !== index));
   };
 
-  const onKeyDown = (e: any) => {
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     console.log(e);
     const { key, keyCode } = e;
     const trimmedInput = input.trim();
@@ -83,7 +84,7 @@ export default function TagInput() {
   };
   return (
     <div>
-      <h1>Add Tags</h1>
+      <h1>태그 등록</h1>
       <Container>
         {tags.map((tag, index) => (
           <Tag key={index} className="tag">

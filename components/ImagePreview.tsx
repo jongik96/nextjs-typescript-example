@@ -8,8 +8,10 @@ const ImagePreview: NextPage = () => {
   const [fileImage, setFileImage] = useState("" as string);
 
   // 파일 저장
-  const saveFileImage = (e: any) => {
-    setFileImage(URL.createObjectURL(e.target.files[0]));
+  const saveFileImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.currentTarget.files !== null) {
+      setFileImage(URL.createObjectURL(e.currentTarget.files[0]));
+    }
   };
 
   // 파일 삭제

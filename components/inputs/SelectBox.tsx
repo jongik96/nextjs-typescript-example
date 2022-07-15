@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const SelectBox: NextPage = () => {
   const [value, setValue] = useState("");
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
   return (

@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const CheckBoxItem = ({ data, checkedItems, checkedItemHandler }: any) => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const onCheck = ({ target }: any) => {
+  const onCheck = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     checkedItemHandler(target.value, target.checked);
     setIsChecked(target.checked);
   };

@@ -1,19 +1,16 @@
-import MenuBar from "../components/MenuBar";
 import NavBar from "../components/navbar/NavBar";
 
 const HideNavBar = () => {
   return (
     <>
-      <MenuBar />
       <NavBar />
       <div>
-        <h1>Hello, World</h1>
+        <h1>상단 메뉴바 숨기기</h1>
         {Array.from({ length: 60 }).map(function (u, i) {
           return (
             <p key={i}>
-              This page has a sticky disappearing header. Scroll down and it
-              will disappear from view. Scroll up and it will reappear like
-              magic.
+              스크롤을 내릴때는 메뉴바가 사라지고 스크롤을 올릴때는 메뉴바가
+              보입니다.
             </p>
           );
         })}
