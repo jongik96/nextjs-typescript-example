@@ -2,7 +2,7 @@
 
 # firebase API Key
 /src/firebase.js
-
+/components/firebase2/firebase.js
 # dependencies
 /node_modules
 /.pnp

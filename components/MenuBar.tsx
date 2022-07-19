@@ -16,7 +16,7 @@ const MenuBar = () => {
         <Link href="/HideNavBar"> Hide NavBar </Link> |
         <Link href="/ScrollRestoration"> Scroll restoration </Link> |
         <Link href="/FireBaseAuth"> FireBase SignUp </Link> |
-        <Link href="/Login"> FireBase LogIn </Link> |
+        <Link href="/FireBaseAuth2"> FireBase SignUp2 </Link> |
       </div>
     </div>
   );

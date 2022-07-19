@@ -1,8 +1,16 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../../src/firebase";
-import { sendEmailVerification } from "firebase/auth";
+import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
 const AuthContext = React.createContext();
+const actionCodeSettings = {
+  // URL you want to redirect back to. The domain (www.example.com) for this
+  // URL must be in the authorized domains list in the Firebase Console.
+  url: "http://localhost:3000",
+  // This must be true.
+  handleCodeInApp: true,
 
+  dynamicLinkDomain: "example.page.link",
+};
 // Context를 지정함
 export function useAuth() {
   return useContext(AuthContext);
@@ -14,12 +22,22 @@ export function AuthProvider({ children }) {
   // 회원가입하는 함수
   function signup(email, password) {
     const response = auth.createUserWithEmailAndPassword(email, password);
-    response.currentUser
-      .sendEmailVerification()
-      .then(function () {
-        alert("Email Sent!");
+    const firebaseAuth = getAuth();
+    sendSignInLinkToEmail(firebaseAuth, email, actionCodeSettings)
+      .then(() => {
+        // The link was successfully sent. Inform the user.
+        // Save the email locally so you don't need to ask the user for it again
+        // if they open the link on the same device.
+        window.localStorage.setItem("emailForSignIn", email);
+        // ...
       })
-      .catch("Email not sent!");
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error();
+        // ...
+      });
+
     return response;
     // return auth.createUserWithEmailAndPassword(email, password);
   }
